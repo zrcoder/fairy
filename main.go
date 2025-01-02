@@ -44,7 +44,7 @@ func main() {
 		conf.WithTheme(conf.ThemeDark),
 		conf.WithIcon("/static/21/2.webp"),
 	).
-		StaticFS("/static/", http.FS(static.FS)).
+		StaticFS("/static", http.FS(static.FS)).
 		Mount("/", index)
 
 	fmt.Println("Serving on http://localhost:8080")
