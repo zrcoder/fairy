@@ -38,6 +38,8 @@ func main() {
 			comp.Tab().Title("Yaq 19").ID("19").Tab(carousel(19, 8)),
 			comp.Tab().Title("Yaq 20").ID("20").Tab(carousel(20, 11)),
 			comp.Tab().Title("Yaq 21").ID("21").Tab(carousel(21, 7)),
+			comp.Tab().Title("Yaq 22").ID("22").Tab(carousel(22, 5)),
+			comp.Tab().Title("Yaq 23").ID("23").Tab(carousel(23, 6, ".jpeg")),
 		),
 	)
 	app := amisgo.New(
