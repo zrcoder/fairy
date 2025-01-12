@@ -18,6 +18,7 @@ const imageCnt = 8
 func main() {
 	index := comp.Page().Body(
 		comp.Tabs().TabsMode("sidebar").Swipeable(true).Tabs(
+			comp.Tab().Title("Yaq").ID("0").Tab(carousel(0, 1, ".gif")),
 			comp.Tab().Title("Yaq 1").ID("1").Tab(carousel(1, 8)),
 			comp.Tab().Title("Yaq 2").ID("2").Tab(carousel(2, 13)),
 			comp.Tab().Title("Yaq 3").ID("3").Tab(carousel(3, 16)),
@@ -41,6 +42,7 @@ func main() {
 			comp.Tab().Title("Yaq 21").ID("21").Tab(carousel(21, 7)),
 			comp.Tab().Title("Yaq 22").ID("22").Tab(carousel(22, 5)),
 			comp.Tab().Title("Yaq 23").ID("23").Tab(carousel(23, 6, ".jpeg")),
+			comp.Tab().Title("Yaq 24").ID("24").Tab(carousel(24, 17)),
 		),
 	)
 	app := amisgo.New(
