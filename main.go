@@ -10,13 +10,12 @@ import (
 	"github.com/zrcoder/amisgo"
 	"github.com/zrcoder/amisgo/conf"
 	"github.com/zrcoder/amisgo/model"
+	"github.com/zrcoder/amisgo/theme"
 )
-
-const imageCnt = 8
 
 func main() {
 	app := amisgo.New(
-		conf.WithTheme(conf.ThemeDark),
+		conf.WithTheme(theme.Dark),
 		conf.WithIcon("/static/21/2.webp"),
 	)
 	index := app.Page().Body(
