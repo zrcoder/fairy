@@ -2,4 +2,4 @@ module gitee.com/rdor/fairy
 
 go 1.22
 
-require github.com/zrcoder/amisgo v0.11.3-amis6.11.0
+require github.com/zrcoder/amisgo v0.11.5
