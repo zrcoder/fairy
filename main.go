@@ -8,8 +8,8 @@ import (
 	"gitee.com/rdor/fairy/static"
 
 	"github.com/zrcoder/amisgo"
+	"github.com/zrcoder/amisgo/comp"
 	"github.com/zrcoder/amisgo/conf"
-	"github.com/zrcoder/amisgo/schema"
 	"github.com/zrcoder/amisgo/theme"
 )
 
@@ -56,7 +56,7 @@ func main() {
 }
 
 func carousel(app *amisgo.App, id, cnt int, f ...string) any {
-	opts := getOptions(id, cnt, f...)
+	opts := getOptions(app, id, cnt, f...)
 	return app.Carousel().
 		Height("940").
 		Auto(false).
@@ -67,15 +67,15 @@ func carousel(app *amisgo.App, id, cnt int, f ...string) any {
 		)
 }
 
-func getOptions(id, cnt int, f ...string) []any {
+func getOptions(app *amisgo.App, id, cnt int, f ...string) []comp.CarouselOption {
 	ext := ".webp"
 	if len(f) > 0 {
 		ext = f[0]
 	}
-	res := make([]any, cnt)
+	res := make([]comp.CarouselOption, cnt)
 	prefix := "/static/" + strconv.Itoa(id) + "/"
 	for i := range res {
-		res[i] = schema.Schema{"image": prefix + strconv.Itoa(i+1) + ext}
+		res[i] = app.CarouselOption().Image(prefix + strconv.Itoa(i+1) + ext)
 	}
 	return res
 }
