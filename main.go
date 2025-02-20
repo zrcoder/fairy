@@ -9,7 +9,7 @@ import (
 
 	"github.com/zrcoder/amisgo"
 	"github.com/zrcoder/amisgo/conf"
-	"github.com/zrcoder/amisgo/model"
+	"github.com/zrcoder/amisgo/schema"
 	"github.com/zrcoder/amisgo/theme"
 )
 
@@ -75,7 +75,7 @@ func getOptions(id, cnt int, f ...string) []any {
 	res := make([]any, cnt)
 	prefix := "/static/" + strconv.Itoa(id) + "/"
 	for i := range res {
-		res[i] = model.Schema{"image": prefix + strconv.Itoa(i+1) + ext}
+		res[i] = schema.Schema{"image": prefix + strconv.Itoa(i+1) + ext}
 	}
 	return res
 }
