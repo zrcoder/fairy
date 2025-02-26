@@ -10,12 +10,11 @@ import (
 	"github.com/zrcoder/amisgo"
 	"github.com/zrcoder/amisgo/comp"
 	"github.com/zrcoder/amisgo/conf"
-	"github.com/zrcoder/amisgo/theme"
 )
 
 func main() {
 	app := amisgo.New(
-		conf.WithTheme(theme.Dark),
+		conf.WithTheme(conf.ThemeDark),
 		conf.WithIcon("/static/21/2.webp"),
 	)
 	index := app.Page().Body(
